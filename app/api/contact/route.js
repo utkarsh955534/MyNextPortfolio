@@ -1,16 +1,10 @@
 import { Resend } from "resend";
-import connectDB from "@/lib/mongodb";
-import Message from "@/models/Message";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
-    await connectDB();
-
-    const body = await req.json();
-
-    const { name, email, subject, message } = body;
+    const { name, email, subject, message } = await req.json();
 
     if (!name || !email || !subject || !message) {
       return Response.json(
@@ -24,15 +18,6 @@ export async function POST(req) {
       );
     }
 
-    // Save to MongoDB
-    await Message.create({
-      name,
-      email,
-      subject,
-      message,
-    });
-
-    // Send Email
     await resend.emails.send({
       from: "Utkarsh <onboarding@resend.dev>",
       to: "utkarshmishra1012005@gmail.com",
@@ -42,9 +27,7 @@ export async function POST(req) {
           <h2>📩 New Portfolio Contact</h2>
 
           <p><strong>Name:</strong> ${name}</p>
-
           <p><strong>Email:</strong> ${email}</p>
-
           <p><strong>Subject:</strong> ${subject}</p>
 
           <hr>
