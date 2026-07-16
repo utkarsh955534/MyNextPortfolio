@@ -145,7 +145,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/utkarsh-mishra-2b3791360/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-full border border-cyan-400 flex justify-center items-center hover:bg-cyan-400 hover:text-black transition text-xl"
