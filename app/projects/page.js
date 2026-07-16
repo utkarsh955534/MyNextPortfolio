@@ -18,7 +18,7 @@ import {
 const projects = [
   {
     title: "Portfolio Website",
-    image: "/projects/portfolio.png",
+    image: "/ProHero1.png",
     description:
       "A modern, responsive portfolio built using Next.js and Tailwind CSS with beautiful animations and dark theme.",
 
@@ -28,13 +28,13 @@ const projects = [
       { name: "Tailwind", icon: <SiTailwindcss /> },
     ],
 
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/utkarsh955534/MyNextPortfolio.git",
     live: "https://yourportfolio.vercel.app",
   },
 
   {
     title: "Get Me A Coffee",
-    image: "/projects/coffee.png",
+    image: "/tea.gif",
     description:
       "Crowdfunding platform where creators receive support from their audience with secure payments.",
 
@@ -50,17 +50,17 @@ const projects = [
 
   {
     title: "Insurance Premium Predictor",
-    image: "/projects/ml.png",
+    image: "/Insurance.avif",
     description:
       "Machine Learning web application that predicts health insurance premiums using Random Forest Regression.",
 
     tech: [
-      { name: "React", icon: <FaReact /> },
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "RandomForest" },
+      { name: "Decision Tree" },
+      { name: "Streamlit", },
     ],
 
-    github: "#",
+    github: "https://github.com/utkarsh955534/Medical-insurance-prediction.git",
     live: "#",
   },
 
